@@ -1,0 +1,48 @@
+.gallery {
+    background-color: @secondary-background-color;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        color: @secondary-text-color;
+        padding: 1rem;
+        margin: 0;
+    }
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        padding-top: 2rem;
+        @media (min-width: @breakResolutions[tablet]) {
+            gap: 2rem;
+        }
+    }
+    .card {
+        position:relative;
+        width: 280px;
+        background-color: #fff;
+        box-shadow: 3px 3px 7px @secondary-background-color-dark;
+        overflow: hidden;
+        border-radius: 8px;
+        h3 {
+            background-color: @secondary-background-color-dark;
+            margin: 0px;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid darken(@secondary-background-color-dark, 10%);
+        }
+        img {
+            width:100%;
+            height: 160px;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
